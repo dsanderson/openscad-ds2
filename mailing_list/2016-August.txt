@@ -1,0 +1,1978 @@
+From oz.at.michael at gmail.com  Mon Aug  1 02:30:50 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Sun, 31 Jul 2016 23:30:50 -0700 (MST)
+Subject: [OpenSCAD] Scad file for Cylindrical lamp shade
+In-Reply-To: <1469980923990-18009.post@n5.nabble.com>
+References: <1469980923990-18009.post@n5.nabble.com>
+Message-ID: <1470033050579-18010.post@n5.nabble.com>
+
+dubbsd wrote
+> I am a newbie to this.
+> I want to create a cylindrical lithograph lamp shade with multiple
+> pictures. (4or 5 pictures per shade).
+> I want to set the diameter of the Cylinder, height of the cylinder, max
+> thickness, and thinnest thickness.  
+> Any help on this would be appreciated.
+> 
+> Thanks
+> Dale
+
+I'd suggest starting with something less ambitious.
+Read the  manual <https://en.wikibooks.org/wiki/OpenSCAD_User_Manual>  ,
+checkout the examples, then understand the lithophane OpenSCAD code on
+Thingiverse here <http://www.thingiverse.com/thing:74322>   and  here
+<http://www.thingiverse.com/thing:78719>  .
+
+Or maybe just try  this <http://www.thingiverse.com/thing:1181437>  .
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/Scad-file-for-Cylindrical-lamp-shade-tp18009p18010.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From drifter.frank at gmail.com  Mon Aug  1 02:55:56 2016
+From: drifter.frank at gmail.com (Frank van der Hulst)
+Date: Mon, 1 Aug 2016 18:55:56 +1200
+Subject: [OpenSCAD] Scad file for Cylindrical lamp shade
+In-Reply-To: <1470033050579-18010.post@n5.nabble.com>
+References: <1469980923990-18009.post@n5.nabble.com>
+	<1470033050579-18010.post@n5.nabble.com>
+Message-ID: <CAOQjr+Mh04ew-0dwGJZzX0sYw9bik8Y+AvHvA+MHcY0T8WVhzA@mail.gmail.com>
+
+Should be quite straightforward.
+
+Create a single JPG or PNG with all your images in the appropriate places
+to wrap around the cylinder.
+
+Then go to  Thingiverse and search for my item "openscad wrap image curved
+surface". Sorry, I can't figure out how to get a hyperlink on my phone.
+You'll also need Python. Use Python to generate a. Scad file, then openscad
+to make an STL.
+
+On 1/08/2016 18:31, "MichaelAtOz" <oz.at.michael at gmail.com> wrote:
+
+> dubbsd wrote
+> > I am a newbie to this.
+> > I want to create a cylindrical lithograph lamp shade with multiple
+> > pictures. (4or 5 pictures per shade).
+> > I want to set the diameter of the Cylinder, height of the cylinder, max
+> > thickness, and thinnest thickness.
+> > Any help on this would be appreciated.
+> >
+> > Thanks
+> > Dale
+>
+> I'd suggest starting with something less ambitious.
+> Read the  manual <https://en.wikibooks.org/wiki/OpenSCAD_User_Manual>  ,
+> checkout the examples, then understand the lithophane OpenSCAD code on
+> Thingiverse here <http://www.thingiverse.com/thing:74322>   and  here
+> <http://www.thingiverse.com/thing:78719>  .
+>
+> Or maybe just try  this <http://www.thingiverse.com/thing:1181437>  .
+>
+>
+>
+> -----
+> Admin - PM me if you need anything, or if I've done something stupid...
+>
+> Unless specifically shown otherwise above, my contribution is in the
+> Public Domain; to the extent possible under law, I have waived all
+> copyright and related or neighbouring rights to this work. Obviously
+> inclusion of works of previous authors is not included in the above.
+>
+> The TPP is no simple ?trade agreement.?   Fight it!
+> http://www.ourfairdeal.org/   time is running out!
+> --
+> View this message in context:
+> http://forum.openscad.org/Scad-file-for-Cylindrical-lamp-shade-tp18009p18010.html
+> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160801/97f97dd1/attachment.html>
+
+From oz.at.michael at gmail.com  Mon Aug  1 21:39:39 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Mon, 1 Aug 2016 18:39:39 -0700 (MST)
+Subject: [OpenSCAD] trouble compiling and rendering
+In-Reply-To: <1470099177989-18014.post@n5.nabble.com>
+References: <1470071685240-18012.post@n5.nabble.com>
+	<1470079206021-18013.post@n5.nabble.com>
+	<1470099177989-18014.post@n5.nabble.com>
+Message-ID: <1470101979775-18015.post@n5.nabble.com>
+
+DanS wrote
+> Would be nice if the progress bar was more linear.  The program really
+> seemed to be hung since it did not update in a linear way.
+
+That tends to be the final union of all the objects, CGAL is not helpful in
+knowing what it is doing under the covers.
+
+I don't know if anyone has thought to estimate the complexity before calling
+CGAL to give some warning of how long it may take.
+
+p.s. Your post is still flagged as "This post has NOT been accepted by the
+mailing list yet", so nobody gets it unless they look. 
+You need to subscribe to the  mailing list
+<http://forum.openscad.org/mailing_list/MailingListOptions.jtp?forum=1>  ,
+and respond to the registration email.
+
+
+
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/trouble-compiling-and-rendering-tp18012p18015.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From ari.diacou at gmail.com  Tue Aug  2 07:28:17 2016
+From: ari.diacou at gmail.com (Ari Diacou)
+Date: Tue, 2 Aug 2016 07:28:17 -0400
+Subject: [OpenSCAD] Scad file for Cylindrical lamp shade
+In-Reply-To: <CAOQjr+Mh04ew-0dwGJZzX0sYw9bik8Y+AvHvA+MHcY0T8WVhzA@mail.gmail.com>
+References: <1469980923990-18009.post@n5.nabble.com>
+	<1470033050579-18010.post@n5.nabble.com>
+	<CAOQjr+Mh04ew-0dwGJZzX0sYw9bik8Y+AvHvA+MHcY0T8WVhzA@mail.gmail.com>
+Message-ID: <CA+HE+0KSU=mDvhSzq99O17XnnMpAV6EJSembCbNx1iqv4ejAPw@mail.gmail.com>
+
+It's going to look something like this:
+(this code will not work as written)
+
+files=["image1.png","image2.png","image3.png","image4.png"]; //all of these
+files MUST be png, and MUST be in the same directory as your scad file
+height=//height of lampshade
+radius=//radius of lampshade
+thickness=//thickness of the lampshade
+inner_radius=radius-thickness;
+translucency=// a range from 0-1.01 which will change the thickness of
+relief of the images, depending on if you want a lithophane or a cutout
+
+difference (){
+    cylinder1();//outer cone
+    cylinder2();//inner cone
+    for(i=[0:len(files)-1]){
+        translate()//center the image
+            rotate([90+atan(height/radius),0,i*360/num_images]) //rotates
+the image from facing up to facing normal to the lampshade, and rotates the
+images around the z axis
+                resize([,,thickness*translucency])
+                    surface(file=files[i]);
+    }
+
+That should get you started. If you cant do it, I'll write it up and put it
+up on thingiverse.
+
+On Mon, Aug 1, 2016 at 2:55 AM, Frank van der Hulst <drifter.frank at gmail.com
+> wrote:
+
+> Should be quite straightforward.
+>
+> Create a single JPG or PNG with all your images in the appropriate places
+> to wrap around the cylinder.
+>
+> Then go to  Thingiverse and search for my item "openscad wrap image curved
+> surface". Sorry, I can't figure out how to get a hyperlink on my phone.
+> You'll also need Python. Use Python to generate a. Scad file, then openscad
+> to make an STL.
+>
+> On 1/08/2016 18:31, "MichaelAtOz" <oz.at.michael at gmail.com> wrote:
+>
+>> dubbsd wrote
+>> > I am a newbie to this.
+>> > I want to create a cylindrical lithograph lamp shade with multiple
+>> > pictures. (4or 5 pictures per shade).
+>> > I want to set the diameter of the Cylinder, height of the cylinder, max
+>> > thickness, and thinnest thickness.
+>> > Any help on this would be appreciated.
+>> >
+>> > Thanks
+>> > Dale
+>>
+>> I'd suggest starting with something less ambitious.
+>> Read the  manual <https://en.wikibooks.org/wiki/OpenSCAD_User_Manual>  ,
+>> checkout the examples, then understand the lithophane OpenSCAD code on
+>> Thingiverse here <http://www.thingiverse.com/thing:74322>   and  here
+>> <http://www.thingiverse.com/thing:78719>  .
+>>
+>> Or maybe just try  this <http://www.thingiverse.com/thing:1181437>  .
+>>
+>>
+>>
+>> -----
+>> Admin - PM me if you need anything, or if I've done something stupid...
+>>
+>> Unless specifically shown otherwise above, my contribution is in the
+>> Public Domain; to the extent possible under law, I have waived all
+>> copyright and related or neighbouring rights to this work. Obviously
+>> inclusion of works of previous authors is not included in the above.
+>>
+>> The TPP is no simple ?trade agreement.?   Fight it!
+>> http://www.ourfairdeal.org/   time is running out!
+>> --
+>> View this message in context:
+>> http://forum.openscad.org/Scad-file-for-Cylindrical-lamp-shade-tp18009p18010.html
+>> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>>
+>> _______________________________________________
+>> OpenSCAD mailing list
+>> Discuss at lists.openscad.org
+>> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>>
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160802/341bbebf/attachment.html>
+
+From dmcnutt at macnauchtan.com  Tue Aug  2 12:02:26 2016
+From: dmcnutt at macnauchtan.com (Doug McNutt)
+Date: Tue, 2 Aug 2016 12:02:26 -0400
+Subject: [OpenSCAD] Cylinders turn into cones
+Message-ID: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+
+I'm using OpenSCAD version 2015.03-1  which seems to be the best I can 
+get for Ubuntu without learning a whole lot more about git. That may be 
+the problem.
+
+I also appreciate the super fast reply when I couldn't get a subtraction 
+of a little cylinder from a bigger one. That got me into a much bigger 
+operation that's working well. But. . .
+
+What is turning my screws into arrowheads? I have extracted 90 percent 
+of the otherwise working file and I'm trying to show a dozen machine 
+screws that will hold three rextruded together parts together. Below is 
+working code extracted from a file I wouldn't dare to post here.
+
+Please advise if you see cylinders or cones!
+
+file: doug02.scad
+
+// Here we specify some dimensions which control everything
+// Each item specified starts with "com"
+
+// Data describing the bearings which may be metric or English when we 
+order them.
+// Current item is kaydonbearings.com  SA060ARO or SA060CP0 or SA060XP0
+combearingod = 6.5*25.4;  // outside diameter of a ball bearing in mm
+combearingid = 6.0*25.4;  // inside diameter of a ball bearing in mm, 
+the "bore"
+combearingyy = 25.4/4;  // Common, and editable, bearing thickness in mm
+combearingsep = 25; // Symmetric, z coordinate difference between 
+bearing centers in mm
+
+////// End of alterable dimensions ///////
+
+// Begin drawing a picture by calling the modules each of which 
+describes a part or two.
+// Parts can be left out by adding a // at the start of its line.
+
+{
+screwbrackets(0);
+// others redacted
+}
+
+/////// Beginning of modules //////
+module screwbrackets(screws)
+	{
+	screwlen = 16;
+	screwrad = 3;  // mm radius
+	count = 12;
+	percount = 360/count;
+	scwrad = -8 + combearingid/2;
+	for (angl=[0:percount:360])
+		{
+		xval=scwrad*cos(angl);
+		yval=scwrad*sin(angl);
+		echo (angl, xval, yval);
+         color("yellow")
+		translate([xval, yval, -screwlen/4]) cylinder(screwlen, screwrad, 0);
+		}
+	}
+////////
+
+
+From nop.head at gmail.com  Tue Aug  2 12:33:27 2016
+From: nop.head at gmail.com (nop head)
+Date: Tue, 2 Aug 2016 17:33:27 +0100
+Subject: [OpenSCAD] Cylinders turn into cones
+In-Reply-To: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+References: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+Message-ID: <CAEEmnrNRDpd69=MQo2Zx-czx+FLPzriHSkMswRyt5Bq=0sbRXw@mail.gmail.com>
+
+Try cylinder(h = screwlen, r = screwrad,)
+
+On 2 August 2016 at 17:02, Doug McNutt <dmcnutt at macnauchtan.com> wrote:
+
+> I'm using OpenSCAD version 2015.03-1  which seems to be the best I can get
+> for Ubuntu without learning a whole lot more about git. That may be the
+> problem.
+>
+> I also appreciate the super fast reply when I couldn't get a subtraction
+> of a little cylinder from a bigger one. That got me into a much bigger
+> operation that's working well. But. . .
+>
+> What is turning my screws into arrowheads? I have extracted 90 percent of
+> the otherwise working file and I'm trying to show a dozen machine screws
+> that will hold three rextruded together parts together. Below is working
+> code extracted from a file I wouldn't dare to post here.
+>
+> Please advise if you see cylinders or cones!
+>
+> file: doug02.scad
+>
+> // Here we specify some dimensions which control everything
+> // Each item specified starts with "com"
+>
+> // Data describing the bearings which may be metric or English when we
+> order them.
+> // Current item is kaydonbearings.com  SA060ARO or SA060CP0 or SA060XP0
+> combearingod = 6.5*25.4;  // outside diameter of a ball bearing in mm
+> combearingid = 6.0*25.4;  // inside diameter of a ball bearing in mm, the
+> "bore"
+> combearingyy = 25.4/4;  // Common, and editable, bearing thickness in mm
+> combearingsep = 25; // Symmetric, z coordinate difference between bearing
+> centers in mm
+>
+> ////// End of alterable dimensions ///////
+>
+> // Begin drawing a picture by calling the modules each of which describes
+> a part or two.
+> // Parts can be left out by adding a // at the start of its line.
+>
+> {
+> screwbrackets(0);
+> // others redacted
+> }
+>
+> /////// Beginning of modules //////
+> module screwbrackets(screws)
+>         {
+>         screwlen = 16;
+>         screwrad = 3;  // mm radius
+>         count = 12;
+>         percount = 360/count;
+>         scwrad = -8 + combearingid/2;
+>         for (angl=[0:percount:360])
+>                 {
+>                 xval=scwrad*cos(angl);
+>                 yval=scwrad*sin(angl);
+>                 echo (angl, xval, yval);
+>         color("yellow")
+>                 translate([xval, yval, -screwlen/4]) cylinder(screwlen,
+> screwrad, 0);
+>                 }
+>         }
+> ////////
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160802/5b8866d6/attachment.html>
+
+From dmcnutt at macnauchtan.com  Tue Aug  2 13:14:02 2016
+From: dmcnutt at macnauchtan.com (Doug McNutt)
+Date: Tue, 2 Aug 2016 13:14:02 -0400
+Subject: [OpenSCAD] Cylinders turn into cones
+In-Reply-To: <CAEEmnrNRDpd69=MQo2Zx-czx+FLPzriHSkMswRyt5Bq=0sbRXw@mail.gmail.com>
+References: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+	<CAEEmnrNRDpd69=MQo2Zx-czx+FLPzriHSkMswRyt5Bq=0sbRXw@mail.gmail.com>
+Message-ID: <9be6a5e3-e296-3780-c13d-aff9a20a40b0@macnauchtan.com>
+
+
+On 08/02/2016 12:33 PM, nop head wrote:
+> Try cylinder(h = screwlen, r = screwrad,)
+
+Wow.  I like this list and the answer quickly got me thinking right but 
+something is still strange:
+
+//works		translate([xval, yval, -screwlen/4]) cylinder(screwlen, r = 
+screwrad, center = true);
+//works		translate([xval, yval, -screwlen/4]) cylinder(h = screwlen, r = 
+screwrad, center = true);
+//fails		translate([xval, yval, -screwlen/4]) cylinder(h = screwlen, r = 
+screwrad, 0);
+//works		translate([xval, yval, -screwlen/4]) cylinder(screwlen, r = 
+screwrad, center = true);
+//cones		translate([xval, yval, -screwlen/4]) cylinder(screwlen, 
+screwrad, center = true);
+
+It looks as though the real problem is the centering but the r= seems 
+necessary while the h= sometimes helps.
+
+But it's working OK now and I can go back to harder things. Sincere thanks.
+
+
+From doug at moens.org  Tue Aug  2 14:09:34 2016
+From: doug at moens.org (doug moen)
+Date: Tue, 2 Aug 2016 14:09:34 -0400
+Subject: [OpenSCAD] Cylinders turn into cones
+In-Reply-To: <9be6a5e3-e296-3780-c13d-aff9a20a40b0@macnauchtan.com>
+References: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+	<CAEEmnrNRDpd69=MQo2Zx-czx+FLPzriHSkMswRyt5Bq=0sbRXw@mail.gmail.com>
+	<9be6a5e3-e296-3780-c13d-aff9a20a40b0@macnauchtan.com>
+Message-ID: <CAGV6i+NmR2rGE9OTWeTi7ptPqvf906N+E0DOaesWn2yA_Twv+A@mail.gmail.com>
+
+Don't use `cylinder` with positional arguments. Only use labeled arguments,
+otherwise you get a surprise.
+
+On 2 August 2016 at 13:14, Doug McNutt <dmcnutt at macnauchtan.com> wrote:
+
+>
+> On 08/02/2016 12:33 PM, nop head wrote:
+>
+>> Try cylinder(h = screwlen, r = screwrad,)
+>>
+>
+> Wow.  I like this list and the answer quickly got me thinking right but
+> something is still strange:
+>
+> //works         translate([xval, yval, -screwlen/4]) cylinder(screwlen, r
+> = screwrad, center = true);
+> //works         translate([xval, yval, -screwlen/4]) cylinder(h =
+> screwlen, r = screwrad, center = true);
+> //fails         translate([xval, yval, -screwlen/4]) cylinder(h =
+> screwlen, r = screwrad, 0);
+> //works         translate([xval, yval, -screwlen/4]) cylinder(screwlen, r
+> = screwrad, center = true);
+> //cones         translate([xval, yval, -screwlen/4]) cylinder(screwlen,
+> screwrad, center = true);
+>
+> It looks as though the real problem is the centering but the r= seems
+> necessary while the h= sometimes helps.
+>
+> But it's working OK now and I can go back to harder things. Sincere thanks.
+>
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160802/83f8e73f/attachment.html>
+
+From Torsten.Paul at gmx.de  Tue Aug  2 14:39:43 2016
+From: Torsten.Paul at gmx.de (Torsten Paul)
+Date: Tue, 2 Aug 2016 20:39:43 +0200
+Subject: [OpenSCAD] Cylinders turn into cones
+In-Reply-To: <CAGV6i+NmR2rGE9OTWeTi7ptPqvf906N+E0DOaesWn2yA_Twv+A@mail.gmail.com>
+References: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+	<CAEEmnrNRDpd69=MQo2Zx-czx+FLPzriHSkMswRyt5Bq=0sbRXw@mail.gmail.com>
+	<9be6a5e3-e296-3780-c13d-aff9a20a40b0@macnauchtan.com>
+	<CAGV6i+NmR2rGE9OTWeTi7ptPqvf906N+E0DOaesWn2yA_Twv+A@mail.gmail.com>
+Message-ID: <b2d73bc3-acaf-1682-1aa3-a0bdf3e6e401@gmx.de>
+
+The positional parameters for cylinder are h, r1, r2 and center.
+Defaults are h = r1 = r2 = 1 and center = false.
+
+so:
+
+cylinder(h = screwlen, r = screwrad, 0)
+
+=> cylinder(h = screwlen, r = screwrad, h = 0)
+// second h assignment is active, so no object generated
+
+
+cylinder(screwlen, screwrad, center = true)
+
+=> cylinder(h = screwlen, r1 = screwrad, center = true)
+// cone as r2 = 1 as that's the default
+
+
+I guess it's basically a very unexpected choice to have r1 and
+r2 as positional parameter, so not using those for cylinder is
+probably the best advice.
+Maybe the documentation could be improved to include this
+information, but it's still not going to be intuitive.
+
+ciao,
+  Torsten.
+
+
+
+From oz.at.michael at gmail.com  Wed Aug  3 02:05:22 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Tue, 2 Aug 2016 23:05:22 -0700 (MST)
+Subject: [OpenSCAD] Hollow Tray Sides/Base Thickness.
+In-Reply-To: <1470149055125-18020.post@n5.nabble.com>
+References: <1470148664392-18019.post@n5.nabble.com>
+	<1470149055125-18020.post@n5.nabble.com>
+Message-ID: <1470204322600-18026.post@n5.nabble.com>
+
+Welcome to the forum. Your post is still flagged as "This post has NOT been
+accepted by the mailing list yet", so nobody gets it unless they look. 
+You need to subscribe to the  mailing list
+<http://forum.openscad.org/mailing_list/MailingListOptions.jtp?forum=1>  ,
+and respond to the registration email.
+
+
+jpvonhemel wrote
+> Did some playing around and I think I may have figured it out. 
+> Translate() positions it in space then its a matter of sizing the object
+> to leave enough space for wall and base thickness. 
+
+Yep, that's right.
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/Hollow-Tray-Sides-Base-Thickness-tp18019p18026.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From oz.at.michael at gmail.com  Wed Aug  3 22:03:03 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Wed, 3 Aug 2016 19:03:03 -0700 (MST)
+Subject: [OpenSCAD] web site with files scad to download
+In-Reply-To: <1470146945900-18018.post@n5.nabble.com>
+References: <1470146945900-18018.post@n5.nabble.com>
+Message-ID: <1470276183339-18027.post@n5.nabble.com>
+
+http://www.thingiverse.com/search/prolific/things?q=&search_mode=advanced&description=&username=&tags=openscad&license=
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/web-site-with-files-scad-to-download-tp18018p18027.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From oz.at.michael at gmail.com  Wed Aug  3 22:07:28 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Wed, 3 Aug 2016 19:07:28 -0700 (MST)
+Subject: [OpenSCAD] Generating Code
+In-Reply-To: <1470135286356-18016.post@n5.nabble.com>
+References: <1470135286356-18016.post@n5.nabble.com>
+Message-ID: <1470276448595-18028.post@n5.nabble.com>
+
+Hi Dan, Welcome to the forum. Your post is still flagged as "This post has
+NOT been accepted by the mailing list yet", so nobody gets it unless they
+look. 
+You need to subscribe to the  mailing list
+<http://forum.openscad.org/mailing_list/MailingListOptions.jtp?forum=1>  ,
+and respond to the registration email.
+
+Your post quoted for others to see:
+
+dandare2020 wrote
+> Hi all
+> 
+> FIrstly what a great program you have.
+> 
+> I would like to produce 3d models of something like
+<http://forum.openscad.org/file/n18016/images.jpg> 
+> 
+<http://forum.openscad.org/file/n18016/download.jpg> 
+> 
+> But would like it easily changeable so was think of making a front end so
+> you can put the pipe size and angles then click a button to generate the
+> required code for openscad. Has anyone do something similar and has anyone
+> produced something like the 2 images in Openscad i was hoping for some
+> idea of the code required for openscad that would give me a start so i
+> could see how to generate the sort of shapes required
+> 
+> Many Thanks
+> 
+> Dan
+
+
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/Generating-Code-tp18016p18028.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From oz.at.michael at gmail.com  Wed Aug  3 22:19:24 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Wed, 3 Aug 2016 19:19:24 -0700 (MST)
+Subject: [OpenSCAD] OpenSCAD working folder
+In-Reply-To: <1469559513915-17987.post@n5.nabble.com>
+References: <1469559513915-17987.post@n5.nabble.com>
+Message-ID: <1470277164542-18029.post@n5.nabble.com>
+
+I'm presuming due to the multi platform nature OpenSCAD does not choose a
+location?
+
+If you installed via the installer.exe edit the shortcut in the start menu,
+set your default directory/folder in 'Start in'.
+
+I generally install via the zip file and create a shortcut in the start menu
+as above.
+
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/OpenSCAD-working-folder-tp17987p18029.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From openscad at vanpeursem.net  Wed Aug  3 22:54:33 2016
+From: openscad at vanpeursem.net (Maurice van Peursem)
+Date: Thu, 4 Aug 2016 04:54:33 +0200
+Subject: [OpenSCAD] Cylinders turn into cones
+In-Reply-To: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+References: <252a4f42-558f-6b64-df4f-3f09d84976de@macnauchtan.com>
+Message-ID: <mailman.0.1470279321.18158.discuss_lists.openscad.org@lists.openscad.org>
+
+You could simplify your code to (also getting rid of the redundant 
+iteration of angl):
+
+
+// Here we specify some dimensions which control everything
+// Each item specified starts with "com"
+
+// Data describing the bearings which may be metric or English when 
+we order them.
+// Current item is kaydonbearings.com  SA060ARO or SA060CP0 or SA060XP0
+combearingod = 6.5*25.4;  // outside diameter of a ball bearing in mm
+combearingid = 6.0*25.4;  // inside diameter of a ball bearing in mm, 
+the "bore"
+combearingyy = 25.4/4;  // Common, and editable, bearing thickness in mm
+combearingsep = 25; // Symmetric, z coordinate difference between 
+bearing centers in mm
+
+////// End of alterable dimensions ///////
+
+// Begin drawing a picture by calling the modules each of which 
+describes a part or two.
+// Parts can be left out by adding a // at the start of its line.
+
+screwbrackets(0);
+// others redacted
+
+
+/////// Beginning of modules //////
+module screwbrackets(screws)
+	{
+	screwlen = 16;
+	screwrad = 3;  // mm radius
+	count = 12;
+	percount = 360/count;
+	scwrad = -8 + combearingid/2;
+	for (angl=[percount:percount:360])
+		rotate([0,0,angl])
+			translate([scwrad, 0, -screwlen/4])
+				cylinder(h=screwlen, r=screwrad);
+	}
+////////
+
+
+Maurice
+
+
+
+>I'm using OpenSCAD version 2015.03-1  which seems to be the best I 
+>can get for Ubuntu without learning a whole lot more about git. That 
+>may be the problem.
+>
+>I also appreciate the super fast reply when I couldn't get a 
+>subtraction of a little cylinder from a bigger one. That got me into 
+>a much bigger operation that's working well. But. . .
+>
+>What is turning my screws into arrowheads? I have extracted 90 
+>percent of the otherwise working file and I'm trying to show a dozen 
+>machine screws that will hold three rextruded together parts 
+>together. Below is working code extracted from a file I wouldn't 
+>dare to post here.
+>
+>Please advise if you see cylinders or cones!
+>
+>file: doug02.scad
+>
+>// Here we specify some dimensions which control everything
+>// Each item specified starts with "com"
+>
+>// Data describing the bearings which may be metric or English when 
+>we order them.
+>// Current item is kaydonbearings.com  SA060ARO or SA060CP0 or SA060XP0
+>combearingod = 6.5*25.4;  // outside diameter of a ball bearing in mm
+>combearingid = 6.0*25.4;  // inside diameter of a ball bearing in 
+>mm, the "bore"
+>combearingyy = 25.4/4;  // Common, and editable, bearing thickness in mm
+>combearingsep = 25; // Symmetric, z coordinate difference between 
+>bearing centers in mm
+>
+>////// End of alterable dimensions ///////
+>
+>// Begin drawing a picture by calling the modules each of which 
+>describes a part or two.
+>// Parts can be left out by adding a // at the start of its line.
+>
+>{
+>screwbrackets(0);
+>// others redacted
+>}
+>
+>/////// Beginning of modules //////
+>module screwbrackets(screws)
+>	{
+>	screwlen = 16;
+>	screwrad = 3;  // mm radius
+>	count = 12;
+>	percount = 360/count;
+>	scwrad = -8 + combearingid/2;
+>	for (angl=[0:percount:360])
+>		{
+>		xval=scwrad*cos(angl);
+>		yval=scwrad*sin(angl);
+>		echo (angl, xval, yval);
+>         color("yellow")
+>		translate([xval, yval, -screwlen/4]) 
+>cylinder(screwlen, screwrad, 0);
+>		}
+>	}
+>////////
+>
+>_______________________________________________
+>OpenSCAD mailing list
+>Discuss at lists.openscad.org
+>http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+
+
+
+From rcmpersiano at gmail.com  Thu Aug  4 17:12:59 2016
+From: rcmpersiano at gmail.com (Ronaldo Persiano)
+Date: Thu, 4 Aug 2016 18:12:59 -0300
+Subject: [OpenSCAD] OpenSCAD working folder
+In-Reply-To: <1470277164542-18029.post@n5.nabble.com>
+References: <1469559513915-17987.post@n5.nabble.com>
+	<1470277164542-18029.post@n5.nabble.com>
+Message-ID: <CA+i9EaDi1o90bww1Z01QHkHu9WCar1xZ5Fpuo3zOidfGfp+Szw@mail.gmail.com>
+
+Nice and perfect, Michael. Thank you.
+
+2016-08-03 23:19 GMT-03:00 MichaelAtOz <oz.at.michael at gmail.com>:
+
+> I'm presuming due to the multi platform nature OpenSCAD does not choose a
+> location?
+>
+> If you installed via the installer.exe edit the shortcut in the start menu,
+> set your default directory/folder in 'Start in'.
+>
+> I generally install via the zip file and create a shortcut in the start
+> menu
+> as above.
+>
+>
+>
+>
+> -----
+> Admin - PM me if you need anything, or if I've done something stupid...
+>
+> Unless specifically shown otherwise above, my contribution is in the
+> Public Domain; to the extent possible under law, I have waived all
+> copyright and related or neighbouring rights to this work. Obviously
+> inclusion of works of previous authors is not included in the above.
+>
+> The TPP is no simple ?trade agreement.?   Fight it!
+> http://www.ourfairdeal.org/   time is running out!
+> --
+> View this message in context: http://forum.openscad.org/
+> OpenSCAD-working-folder-tp17987p18029.html
+> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160804/c8f0b5f7/attachment.html>
+
+From runsun at gmail.com  Fri Aug  5 16:15:38 2016
+From: runsun at gmail.com (runsun)
+Date: Fri, 5 Aug 2016 13:15:38 -0700 (MST)
+Subject: [OpenSCAD] Generating Code
+In-Reply-To: <1470135286356-18016.post@n5.nabble.com>
+References: <1470135286356-18016.post@n5.nabble.com>
+Message-ID: <1470428138416-18032.post@n5.nabble.com>
+
+Check out the documentation :
+
+https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language
+
+
+
+-----
+
+$  Runsun Pan, PhD $ libs: doctest , faces ( git ), offline doc ( git ), runscad.py ( 2 , git ), synwrite ( 2 ); &nbsp; $ tips: hash ( 2 ), matrix ( 2 , 3 ), sweep ( 2 ), var ( 2 ), lerp , animation ( gif , prodVid , animlib ), precision ( 2 ), xl-control , type , rounded polygon , chfont , tailRecur ( 2, 3 ), isosphere ( 2 ), area , vol/center , RGB , CurvedImg ; $ Apps: rollApp , blockscad , openjscad , on AWS ( pdf ) 
+--
+View this message in context: http://forum.openscad.org/Generating-Code-tp18016p18032.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From oz.at.michael at gmail.com  Fri Aug  5 18:58:40 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Fri, 5 Aug 2016 15:58:40 -0700 (MST)
+Subject: [OpenSCAD] Any way to twist twice before extruding once?
+In-Reply-To: <1470431911610-18033.post@n5.nabble.com>
+References: <1470431911610-18033.post@n5.nabble.com>
+Message-ID: <1470437920296-18034.post@n5.nabble.com>
+
+DanS wrote
+> The linear extrude tool is great but I'm having trouble getting it to do
+> one thing I want.
+> 
+> Let's say you have three circles and you wish to extrude them such that C
+> twists around B and B twists around A.
+> 
+> I can't quite see how to do that because I believe I read you can only
+> extrude something once (plus a second extrusion might "smear" an object
+> even if it were possible).
+> 
+> Is there a way to do this?
+
+Quoted as it didn't make it to the mailing list.
+
+
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/Any-way-to-twist-twice-before-extruding-once-tp18033p18034.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From tabbydan at gmail.com  Sat Aug  6 16:27:10 2016
+From: tabbydan at gmail.com (DanS)
+Date: Sat, 6 Aug 2016 13:27:10 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+Message-ID: <1470515230838-18036.post@n5.nabble.com>
+
+I obviously have some stupid syntax error that I can't figure out.  I suspect
+that I need to do something for my if statement that I haven't
+
+I've looked at the manual and my module, if, and for statements look (to me)
+conformant.  But obviously I've missed something.  The line "angle = " is
+flagged as being bad, but if I move it above the if statement (or remove the
+if statement) it goes past that and then has an issue with inside the for
+loop.
+
+What am I doing wrong?
+
+
+module rfsphere(counter,geometry,growth,xoffset,yoffset,size)
+  {
+  if(counter>0) 
+    {
+    angle = (360/geometry);
+    ratio = (1 / (geometry / 2));
+    newcounter = counter - 1;
+    newgeometry = geometry + growth;
+	  newsize = size * ratio;
+    for(i=[1:1:geometry])
+      {
+      xoffset = xoffset + (size * sin(angle*i);
+      yoffset = yoffset + (size * cos(angle*i);
+      translate([x,y,0]) {
+		   sphere(newsize, $fn=100);
+      }
+      rfsphere(newcounter, newgeometry, growth, xoffset, yoffset, newsize);
+    }
+}
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From andrea.croci at gmx.de  Sat Aug  6 16:32:25 2016
+From: andrea.croci at gmx.de (Andrea Croci)
+Date: Sat, 6 Aug 2016 22:32:25 +0200
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470515230838-18036.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+Message-ID: <2b2a09d1-9a2a-2477-1b09-5b0ffdc33fd4@gmx.de>
+
+Could it be that curly bracket after translate that is not closed?
+
+On 06.08.2016 22:27, DanS wrote:
+> I obviously have some stupid syntax error that I can't figure out.  I suspect
+> that I need to do something for my if statement that I haven't
+>
+> I've looked at the manual and my module, if, and for statements look (to me)
+> conformant.  But obviously I've missed something.  The line "angle = " is
+> flagged as being bad, but if I move it above the if statement (or remove the
+> if statement) it goes past that and then has an issue with inside the for
+> loop.
+>
+> What am I doing wrong?
+>
+>
+> module rfsphere(counter,geometry,growth,xoffset,yoffset,size)
+>    {
+>    if(counter>0)
+>      {
+>      angle = (360/geometry);
+>      ratio = (1 / (geometry / 2));
+>      newcounter = counter - 1;
+>      newgeometry = geometry + growth;
+> 	  newsize = size * ratio;
+>      for(i=[1:1:geometry])
+>        {
+>        xoffset = xoffset + (size * sin(angle*i);
+>        yoffset = yoffset + (size * cos(angle*i);
+>        translate([x,y,0]) {
+> 		   sphere(newsize, $fn=100);
+>        }
+>        rfsphere(newcounter, newgeometry, growth, xoffset, yoffset, newsize);
+>      }
+> }
+>
+>
+>
+> --
+> View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036.html
+> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+
+
+
+From fred_dot_u at yahoo.com  Sat Aug  6 16:33:17 2016
+From: fred_dot_u at yahoo.com (fred_dot_u)
+Date: Sat, 6 Aug 2016 13:33:17 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470515230838-18036.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+Message-ID: <1470515597916-18038.post@n5.nabble.com>
+
+The two lines with offset in them, xoffset and yoffset are missing trailing )
+and the entire module needs a closing }
+
+I did not test any other aspect other than to identify the syntax problems.
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18038.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From Torsten.Paul at gmx.de  Sat Aug  6 16:45:49 2016
+From: Torsten.Paul at gmx.de (Torsten Paul)
+Date: Sat, 6 Aug 2016 22:45:49 +0200
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470515230838-18036.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+Message-ID: <8bb6a0a3-38c2-ccc2-b900-58bb97f859f9@gmx.de>
+
+On 08/06/2016 10:27 PM, DanS wrote:
+> The line "angle = " is flagged as being bad, but if I move it above
+> the if statement (or remove the if statement) it goes past that...
+>
+In addition to the other issues mentioned, are you using an old
+version which does not allow assignments everywhere?
+
+ciao,
+  Torsten.
+
+
+
+From tabbydan at gmail.com  Sat Aug  6 17:54:10 2016
+From: tabbydan at gmail.com (DanS)
+Date: Sat, 6 Aug 2016 14:54:10 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470515597916-18038.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+Message-ID: <1470520450921-18072.post@n5.nabble.com>
+
+Thanks for picking up those errors. I did not see the missing closing brace
+or the missing parens.  But even after those are fixed, it oddly still
+complains that there is a syntax error on the first assignment.  Is
+something wrong with my "if" syntax?
+
+it still highlights the whitespace character just after "angle =" and says
+there is a syntax error on that line
+
+
+module rfsphere(counter,geometry,growth,xoffset,yoffset,size)
+  {     
+  if(counter>0) 
+    {
+    angle = (360/geometry);
+    ratio = (1 / (geometry / 2));
+    newcounter = counter - 1;
+    newgeometry = geometry + growth;
+    newsize = size * ratio;
+    for(i=[1:1:geometry])
+      {
+      xoffset = xoffset + (size * sin(angle*i));
+      yoffset = yoffset + (size * cos(angle*i));
+      translate([x,y,0])
+        {
+		   sphere(newsize, $fn=100);
+        }
+      rfsphere(newcounter, newgeometry, growth, xoffset, yoffset, newsize);
+      }
+    }
+  }  
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18072.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From drew at DasRogges.com  Sat Aug  6 17:59:26 2016
+From: drew at DasRogges.com (Drew Rogge)
+Date: Sat, 6 Aug 2016 14:59:26 -0700
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470520450921-18072.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+Message-ID: <979302b7-7498-a632-9825-bef554609179@DasRogges.com>
+
+The use of the variables x and y should be xoffset and yoffset I think.
+
+
+On 8/6/16 2:54 PM, DanS wrote:
+> Thanks for picking up those errors. I did not see the missing closing brace
+> or the missing parens.  But even after those are fixed, it oddly still
+> complains that there is a syntax error on the first assignment.  Is
+> something wrong with my "if" syntax?
+>
+> it still highlights the whitespace character just after "angle =" and says
+> there is a syntax error on that line
+>
+>
+> module rfsphere(counter,geometry,growth,xoffset,yoffset,size)
+>    {
+>    if(counter>0)
+>      {
+>      angle = (360/geometry);
+>      ratio = (1 / (geometry / 2));
+>      newcounter = counter - 1;
+>      newgeometry = geometry + growth;
+>      newsize = size * ratio;
+>      for(i=[1:1:geometry])
+>        {
+>        xoffset = xoffset + (size * sin(angle*i));
+>        yoffset = yoffset + (size * cos(angle*i));
+>        translate([x,y,0])
+>          {
+> 		   sphere(newsize, $fn=100);
+>          }
+>        rfsphere(newcounter, newgeometry, growth, xoffset, yoffset, newsize);
+>        }
+>      }
+>    }
+>
+>
+>
+> --
+> View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18072.html
+> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+
+-- 
+Drew Rogge
+drew at dasrogges.com
+
+Phone: 8934OOO629OO4829631OOOOOOO
+
+
+
+From fred_dot_u at yahoo.com  Sat Aug  6 17:59:57 2016
+From: fred_dot_u at yahoo.com (fred_dot_u)
+Date: Sat, 6 Aug 2016 14:59:57 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470520450921-18072.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+Message-ID: <1470520797991-18073.post@n5.nabble.com>
+
+I don't get a syntax error or any error message when F5 on the module alone.
+Calling the module from outside results in an error, because your module
+contains a call to your module. Should the code you've presented be
+separated into two distinct segments?
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18073.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From tabbydan at gmail.com  Sat Aug  6 18:10:15 2016
+From: tabbydan at gmail.com (DanS)
+Date: Sat, 6 Aug 2016 15:10:15 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470520797991-18073.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+	<1470520797991-18073.post@n5.nabble.com>
+Message-ID: <1470521415880-18075.post@n5.nabble.com>
+
+You and Drew pointed out that I'd meant xoffset and written x.
+
+I was just showing the recursive part of my module.
+
+Even after correcting x by chaning it to xoffset (and the same for y) I
+still get a syntax error on the first assignment (which confuses me).
+
+I'll put all the code here (recursive and non recursive parts), it still
+flags the "angle =" line as being bad.  Which makes me wonder if my if or
+module syntax is wrong.
+
+module rfsphere(counter,geometry,growth,xoffset,yoffset,size)
+  {     
+  if(counter>0) 
+    {
+    angle = (360/geometry);
+    ratio = (1 / (geometry / 2));
+    newcounter = counter - 1;
+    newgeometry = geometry + growth;
+    newsize = size * ratio;
+    for(i=[1:1:geometry])
+      {
+      xoffset = xoffset + (size * sin(angle*i));
+      yoffset = yoffset + (size * cos(angle*i));
+      translate([xoffset,yoffset,0])
+        {
+		   sphere(newsize, $fn=100);
+        }
+      rfsphere(newcounter, newgeometry, growth, xoffset, yoffset, newsize);
+      }
+    }
+  }
+
+module fsphere(counter,geometry,growth,size){
+	sphere(size, $fn=100);
+	counter = counter - 1;
+   newsize = (1 / (geometry/2))*size;
+
+   angle = 360/geometry;
+   ratio = 1 / (geometry / 2);
+   newgeometry = geomertry + growth;
+   for(i=steps(1,1,geometry)) {
+	   x = size * sin(angle*i);
+      y = size * cos(angle*i);
+      translate([x,y,0]) {
+		   sphere(size*scale, $fn=100);
+      }
+      rfsphere(counter, newgeometry, growth, x, y, size*scale);
+    }
+}
+
+fsphere(4,3,2,100);
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18075.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From whosawhatsis at gmail.com  Sat Aug  6 18:17:31 2016
+From: whosawhatsis at gmail.com (Whosawhatsis)
+Date: Sat, 6 Aug 2016 15:17:31 -0700
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470521415880-18075.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+	<1470520797991-18073.post@n5.nabble.com>
+	<1470521415880-18075.post@n5.nabble.com>
+Message-ID: <CAO3p9u3HGQ2RvRGkbSnZFRWe+U6H=2r=zh9q09pKJ-wenMEoBA@mail.gmail.com>
+
+You can't do assignments inside a conditional in openscad. It's part of the
+fact that openscad variables aren't really variables. You're also changing
+the values of variables later, which isn't allowed either.
+
+You can do conditional variable assignment using the ternary operator, but
+for this purpose, it doesn't look like it's necessary, just set your
+variables before going into the if statement. Getting rid of the
+reassignments will be a little more complicated.
+
+
+
+From: DanS <tabbydan at gmail.com> <tabbydan at gmail.com>
+Reply: OpenSCAD general discussion <discuss at lists.openscad.org>
+<discuss at lists.openscad.org>
+Date: August 6, 2016 at 15:11:04
+To: discuss at lists.openscad.org <discuss at lists.openscad.org>
+<discuss at lists.openscad.org>
+Subject:  Re: [OpenSCAD] a stupid syntax error I can't see
+
+You and Drew pointed out that I'd meant xoffset and written x.
+
+I was just showing the recursive part of my module.
+
+Even after correcting x by chaning it to xoffset (and the same for y) I
+still get a syntax error on the first assignment (which confuses me).
+
+I'll put all the code here (recursive and non recursive parts), it still
+flags the "angle =" line as being bad. Which makes me wonder if my if or
+module syntax is wrong.
+
+module rfsphere(counter,geometry,growth,xoffset,yoffset,size)
+{
+if(counter>0)
+{
+angle = (360/geometry);
+ratio = (1 / (geometry / 2));
+newcounter = counter - 1;
+newgeometry = geometry + growth;
+newsize = size * ratio;
+for(i=[1:1:geometry])
+{
+xoffset = xoffset + (size * sin(angle*i));
+yoffset = yoffset + (size * cos(angle*i));
+translate([xoffset,yoffset,0])
+{
+sphere(newsize, $fn=100);
+}
+rfsphere(newcounter, newgeometry, growth, xoffset, yoffset, newsize);
+}
+}
+}
+
+module fsphere(counter,geometry,growth,size){
+sphere(size, $fn=100);
+counter = counter - 1;
+newsize = (1 / (geometry/2))*size;
+
+angle = 360/geometry;
+ratio = 1 / (geometry / 2);
+newgeometry = geomertry + growth;
+for(i=steps(1,1,geometry)) {
+x = size * sin(angle*i);
+y = size * cos(angle*i);
+translate([x,y,0]) {
+sphere(size*scale, $fn=100);
+}
+rfsphere(counter, newgeometry, growth, x, y, size*scale);
+}
+}
+
+fsphere(4,3,2,100);
+
+
+
+-- 
+View this message in context:
+http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18075.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+_______________________________________________
+OpenSCAD mailing list
+Discuss at lists.openscad.org
+http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160806/df7fb3e0/attachment.html>
+
+From tabbydan at gmail.com  Sat Aug  6 18:27:43 2016
+From: tabbydan at gmail.com (DanS)
+Date: Sat, 6 Aug 2016 15:27:43 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <CAO3p9u3HGQ2RvRGkbSnZFRWe+U6H=2r=zh9q09pKJ-wenMEoBA@mail.gmail.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+	<1470520797991-18073.post@n5.nabble.com>
+	<1470521415880-18075.post@n5.nabble.com>
+	<CAO3p9u3HGQ2RvRGkbSnZFRWe+U6H=2r=zh9q09pKJ-wenMEoBA@mail.gmail.com>
+Message-ID: <1470522463775-18077.post@n5.nabble.com>
+
+Thanks, that gets rid of those syntax errors and I'll try to remember no
+assignments inside if statements.
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18077.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From drew at DasRogges.com  Sat Aug  6 19:12:02 2016
+From: drew at DasRogges.com (Drew Rogge)
+Date: Sat, 6 Aug 2016 16:12:02 -0700
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470522463775-18077.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+	<1470520797991-18073.post@n5.nabble.com>
+	<1470521415880-18075.post@n5.nabble.com>
+	<CAO3p9u3HGQ2RvRGkbSnZFRWe+U6H=2r=zh9q09pKJ-wenMEoBA@mail.gmail.com>
+	<1470522463775-18077.post@n5.nabble.com>
+Message-ID: <3903ceb2-45c7-629a-589c-45419acb3bcf@DasRogges.com>
+
+What version of OpenSCAD are you using? The following works on version 2015.03-1 on a Mac:
+
+module rfsphere(counter,geometry,growth,xoffset,yoffset,size)
+   {
+   if(counter>0)
+     {
+     angle = (360/geometry);
+     ratio = (1 / (geometry / 2));
+     newcounter = counter - 1;
+     newgeometry = geometry + growth;
+     newsize = size * ratio;
+     for(i=[1:1:geometry])
+       {
+       xoffset = xoffset + (size * sin(angle*i));
+       yoffset = yoffset + (size * cos(angle*i));
+       translate([xoffset,yoffset,0])
+         {
+            sphere(newsize, $fn=100);
+         }
+       rfsphere(newcounter, newgeometry, growth, xoffset, yoffset, newsize);
+       }
+     }
+   }
+
+rfsphere(5, 1, 2, 3, 4, 5);
+
+
+On 8/6/16 3:27 PM, DanS wrote:
+> Thanks, that gets rid of those syntax errors and I'll try to remember no
+> assignments inside if statements.
+>
+>
+>
+> --
+> View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18077.html
+> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+
+-- 
+Drew Rogge
+drew at dasrogges.com
+
+Phone: 8934OOO629OO4829631OOOOOOO
+
+
+
+From tabbydan at gmail.com  Sat Aug  6 19:16:58 2016
+From: tabbydan at gmail.com (DanS)
+Date: Sat, 6 Aug 2016 16:16:58 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <3903ceb2-45c7-629a-589c-45419acb3bcf@DasRogges.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+	<1470520797991-18073.post@n5.nabble.com>
+	<1470521415880-18075.post@n5.nabble.com>
+	<CAO3p9u3HGQ2RvRGkbSnZFRWe+U6H=2r=zh9q09pKJ-wenMEoBA@mail.gmail.com>
+	<1470522463775-18077.post@n5.nabble.com>
+	<3903ceb2-45c7-629a-589c-45419acb3bcf@DasRogges.com>
+Message-ID: <1470525418208-18079.post@n5.nabble.com>
+
+2014.03 
+
+I should probably update
+Trying to debug it as it isn't doing what I wanted (found a bunch of
+mistakes so far, recursion is always messy though).
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18079.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From drew at DasRogges.com  Sat Aug  6 21:28:38 2016
+From: drew at DasRogges.com (Drew Rogge)
+Date: Sat, 6 Aug 2016 18:28:38 -0700
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <1470525418208-18079.post@n5.nabble.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+	<1470520797991-18073.post@n5.nabble.com>
+	<1470521415880-18075.post@n5.nabble.com>
+	<CAO3p9u3HGQ2RvRGkbSnZFRWe+U6H=2r=zh9q09pKJ-wenMEoBA@mail.gmail.com>
+	<1470522463775-18077.post@n5.nabble.com>
+	<3903ceb2-45c7-629a-589c-45419acb3bcf@DasRogges.com>
+	<1470525418208-18079.post@n5.nabble.com>
+Message-ID: <59de77a5-55b1-f179-d671-2426dd6911ef@DasRogges.com>
+
+Yeah, upgrading would be a good thing. I think you could do what you're trying to do by using the
+"assign" statement in the version you're using. The assign statement has been deprecated in later versions so it's probably best to not start using it.
+
+
+On 8/6/16 4:16 PM, DanS wrote:
+> 2014.03
+>
+> I should probably update
+> Trying to debug it as it isn't doing what I wanted (found a bunch of
+> mistakes so far, recursion is always messy though).
+>
+>
+>
+> --
+> View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18079.html
+> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+
+-- 
+Drew Rogge
+drew at dasrogges.com
+
+Phone: 8934OOO629OO4829631OOOOOOO
+
+
+
+From tabbydan at gmail.com  Sat Aug  6 22:56:04 2016
+From: tabbydan at gmail.com (DanS)
+Date: Sat, 6 Aug 2016 19:56:04 -0700 (MST)
+Subject: [OpenSCAD] a stupid syntax error I can't see
+In-Reply-To: <59de77a5-55b1-f179-d671-2426dd6911ef@DasRogges.com>
+References: <1470515230838-18036.post@n5.nabble.com>
+	<1470515597916-18038.post@n5.nabble.com>
+	<1470520450921-18072.post@n5.nabble.com>
+	<1470520797991-18073.post@n5.nabble.com>
+	<1470521415880-18075.post@n5.nabble.com>
+	<CAO3p9u3HGQ2RvRGkbSnZFRWe+U6H=2r=zh9q09pKJ-wenMEoBA@mail.gmail.com>
+	<1470522463775-18077.post@n5.nabble.com>
+	<3903ceb2-45c7-629a-589c-45419acb3bcf@DasRogges.com>
+	<1470525418208-18079.post@n5.nabble.com>
+	<59de77a5-55b1-f179-d671-2426dd6911ef@DasRogges.com>
+Message-ID: <1470538564329-18081.post@n5.nabble.com>
+
+After debugging I can get fractals and quazi fractals out of the code.  Some
+of them look rather odd:
+
+<http://forum.openscad.org/file/n18081/quazifractal.png> 
+
+
+
+--
+View this message in context: http://forum.openscad.org/a-stupid-syntax-error-I-can-t-see-tp18036p18081.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From oz.at.michael at gmail.com  Sun Aug  7 06:22:33 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Sun, 7 Aug 2016 03:22:33 -0700 (MST)
+Subject: [OpenSCAD] My Openscad layout changed...
+In-Reply-To: <1470500598769-18035.post@n5.nabble.com>
+References: <1470500598769-18035.post@n5.nabble.com>
+Message-ID: <1470565353604-18082.post@n5.nabble.com>
+
+Grab that darker grey bar where 'editor' is and drag it to the left.
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/My-Openscad-layout-changed-tp18035p18082.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From tabbydan at gmail.com  Sun Aug  7 14:36:53 2016
+From: tabbydan at gmail.com (DanS)
+Date: Sun, 7 Aug 2016 11:36:53 -0700 (MST)
+Subject: [OpenSCAD] Tips for OpenSCAD on Windows 7
+Message-ID: <1470595013509-18083.post@n5.nabble.com>
+
+I having issues running OpenSCAD on Windows 7.
+
+The problems are OS caused and I want to get some "happy ballance".
+
+I am doing stuff that seems to be calculation intensive but Windows goes to
+sleep and nothing is done during sleep.
+
+I know I can set the computer to "never sleep" but I'm wondering if there is
+some better middle ground like "if application/process X is running let it
+have what it wants"  By that I mean the OS could turn the screen off (I
+don't need a display while it is calculating) and if it isn't swapping to
+disk let the disk spin down to an idle.
+
+What do other people on Windows do?  I would prefer to garner some power
+savings by letting some resources go idle.
+
+
+
+--
+View this message in context: http://forum.openscad.org/Tips-for-OpenSCAD-on-Windows-7-tp18083.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From ari.diacou at gmail.com  Sun Aug  7 19:37:51 2016
+From: ari.diacou at gmail.com (Ari Diacou)
+Date: Sun, 7 Aug 2016 19:37:51 -0400
+Subject: [OpenSCAD] problems with use/include - path error in build?
+Message-ID: <CA+HE+0Jm4wdArOR7SrDBqiVYhxPCesDzGy4qTmjuYugQ70iXKg@mail.gmail.com>
+
+I am using 2015.03
+
+I was having problems using the use command (source code at the bottom).
+
+I got an error that said: "WARNING: Can't open library
+'metric_fastners.scad'.
+
+I did some digging on the wiki, and found out I could check my library
+paths.
+
+As is obvious from the screenshot, I am using windows.
+
+
+?
+What is messed up is that the paths have the wrong slashes. Is this what is
+causing my "use" errors?
+
+Thanks,
+--Ari M Diacou
+College Park, MD, USA
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160807/be5eade7/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: openscad path error.png
+Type: image/png
+Size: 33910 bytes
+Desc: not available
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160807/be5eade7/attachment.png>
+
+From oz.at.michael at gmail.com  Sun Aug  7 21:14:40 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Sun, 7 Aug 2016 18:14:40 -0700 (MST)
+Subject: [OpenSCAD] problems with use/include - path error in build?
+In-Reply-To: <CA+HE+0Jm4wdArOR7SrDBqiVYhxPCesDzGy4qTmjuYugQ70iXKg@mail.gmail.com>
+References: <CA+HE+0Jm4wdArOR7SrDBqiVYhxPCesDzGy4qTmjuYugQ70iXKg@mail.gmail.com>
+Message-ID: <1470618880144-18085.post@n5.nabble.com>
+
+drxenocide wrote
+> (source code at the bottom).
+
+?
+
+The slashes (mixed up set of / & \) in your library info are the same as
+mine.
+
+As well as the source, please show the paths to the main program and the
+metric_fastners.scad files.
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/problems-with-use-include-path-error-in-build-tp18084p18085.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From drew at DasRogges.com  Sun Aug  7 21:17:10 2016
+From: drew at DasRogges.com (Drew Rogge)
+Date: Sun, 7 Aug 2016 18:17:10 -0700
+Subject: [OpenSCAD] problems with use/include - path error in build?
+In-Reply-To: <CA+HE+0Jm4wdArOR7SrDBqiVYhxPCesDzGy4qTmjuYugQ70iXKg@mail.gmail.com>
+References: <CA+HE+0Jm4wdArOR7SrDBqiVYhxPCesDzGy4qTmjuYugQ70iXKg@mail.gmail.com>
+Message-ID: <3054a5e7-7aca-ba35-263d-81a88fdfafe5@DasRogges.com>
+
+Probably not. Internally Windows can use either forward or back slashes.
+
+
+On 8/7/16 4:37 PM, Ari Diacou wrote:
+> I am using 2015.03
+>
+> I was having problems using the use command (source code at the bottom).
+>
+> I got an error that said: "WARNING: Can't open library 'metric_fastners.scad'.
+>
+> I did some digging on the wiki, and found out I could check my library paths.
+>
+> As is obvious from the screenshot, I am using windows.
+>
+>
+> ?
+> What is messed up is that the paths have the wrong slashes. Is this what is causing my "use" errors?
+>
+> Thanks,
+> --Ari M Diacou
+> College Park, MD, USA
+>
+>
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+
+-- 
+Drew Rogge
+drew at dasrogges.com
+
+Phone: 8934OOO629OO4829631OOOOOOO
+
+
+
+From oz.at.michael at gmail.com  Sun Aug  7 21:27:14 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Sun, 7 Aug 2016 18:27:14 -0700 (MST)
+Subject: [OpenSCAD] Tips for OpenSCAD on Windows 7
+In-Reply-To: <1470595013509-18083.post@n5.nabble.com>
+References: <1470595013509-18083.post@n5.nabble.com>
+Message-ID: <1470619634730-18087.post@n5.nabble.com>
+
+DanS wrote
+> "if application/process X is running let it have what it wants" 
+
+Probably but it would not be straight forward.
+
+> By that I mean the OS could turn the screen off (I don't need a display
+> while it is calculating) and if it isn't swapping to disk let the disk
+> spin down to an idle.
+
+'Control Panel/Power Options/Change Plan Settings/Change Advanced Power
+Options' lets you set individual options for hard disc, display, sleep and
+other things.
+I don't have much power saving ATM, but I tend to do display off first, disc
+off shortly thereafter, sleep a lot later (but off if I'm in a process heavy
+state). ATM, I manually hibernate via the start menu when I'm not going to
+use it. (tho hibernate v's sleep is due to a error waking from sleep, but
+hibernate saves  more power)
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/Tips-for-OpenSCAD-on-Windows-7-tp18083p18087.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From rcmpersiano at gmail.com  Sun Aug  7 23:20:14 2016
+From: rcmpersiano at gmail.com (Ronaldo)
+Date: Sun, 7 Aug 2016 20:20:14 -0700 (MST)
+Subject: [OpenSCAD] The Olympic Sun
+Message-ID: <1470626414594-18088.post@n5.nabble.com>
+
+I got impassioned by the huge sculpture that adorned the caldron on the 2016
+Oplympic Games oppening here in Rio de Janeiro. The spiraled movements
+bewitched me. The reflections on the metalic surfaces had dramatic effect. I
+could not resist to model and animate it.
+
+OlympicGame2016_Sun.scad
+<http://forum.openscad.org/file/n18088/OlympicGame2016_Sun.scad>  
+
+The apparent intricacy of the movements is in fact very simple but
+ingenuous. The sculpture was made by the american artist Antony Howe. There
+are many videos on the  sculpture in Youtube
+<https://www.youtube.com/watch?v=Lyx1u_94cN0>  . Enjoy it!
+
+
+
+--
+View this message in context: http://forum.openscad.org/The-Olympic-Sun-tp18088.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From runsun at gmail.com  Mon Aug  8 00:08:18 2016
+From: runsun at gmail.com (runsun)
+Date: Sun, 7 Aug 2016 21:08:18 -0700 (MST)
+Subject: [OpenSCAD] The Olympic Sun
+In-Reply-To: <1470626414594-18088.post@n5.nabble.com>
+References: <1470626414594-18088.post@n5.nabble.com>
+Message-ID: <1470629298072-18089.post@n5.nabble.com>
+
+Wow, nice work. 
+
+
+
+-----
+
+$  Runsun Pan, PhD $ libs: doctest , faces ( git ), offline doc ( git ), runscad.py ( 2 , git ), synwrite ( 2 ); &nbsp; $ tips: hash ( 2 ), matrix ( 2 , 3 ), sweep ( 2 ), var ( 2 ), lerp , animation ( gif , prodVid , animlib ), precision ( 2 ), xl-control , type , rounded polygon , chfont , tailRecur ( 2, 3 ), isosphere ( 2 ), area , vol/center , RGB , CurvedImg ; $ Apps: rollApp , blockscad , openjscad , on AWS ( pdf ) 
+--
+View this message in context: http://forum.openscad.org/The-Olympic-Sun-tp18088p18089.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From rcmpersiano at gmail.com  Mon Aug  8 15:22:06 2016
+From: rcmpersiano at gmail.com (Ronaldo)
+Date: Mon, 8 Aug 2016 12:22:06 -0700 (MST)
+Subject: [OpenSCAD] The Olympic Sun
+In-Reply-To: <1470629298072-18089.post@n5.nabble.com>
+References: <1470626414594-18088.post@n5.nabble.com>
+	<1470629298072-18089.post@n5.nabble.com>
+Message-ID: <1470684126513-18090.post@n5.nabble.com>
+
+Interestingly, if we connect all moving Sun disk positions at a given time,
+we get two interwoven T(2,1) torus knot! 
+
+<http://forum.openscad.org/file/n18090/OlympicSun_knots.png> 
+<http://forum.openscad.org/file/n18090/OlympicSun_knots2.png> 
+
+
+
+--
+View this message in context: http://forum.openscad.org/The-Olympic-Sun-tp18088p18090.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From rcmpersiano at gmail.com  Mon Aug  8 16:37:08 2016
+From: rcmpersiano at gmail.com (Ronaldo Persiano)
+Date: Mon, 8 Aug 2016 17:37:08 -0300
+Subject: [OpenSCAD] Any way to twist twice before extruding once?
+In-Reply-To: <1470437920296-18034.post@n5.nabble.com>
+References: <1470431911610-18033.post@n5.nabble.com>
+	<1470437920296-18034.post@n5.nabble.com>
+Message-ID: <CA+i9EaD9sW2vyadXivZa1MWg4YkwDrPE3fPOqzG4pJKHVcCy9Q@mail.gmail.com>
+
+You could not do it with linear_extrude which just twists around the
+extrusion axis. If I understand well your problem, you need a helical
+extrusion. If I am right, you will need some sweep operator. See
+https://github.com/openscad/list-comprehension-demos
+
+2016-08-05 19:58 GMT-03:00 MichaelAtOz <oz.at.michael at gmail.com>:
+
+> DanS wrote
+> > The linear extrude tool is great but I'm having trouble getting it to do
+> > one thing I want.
+> >
+> > Let's say you have three circles and you wish to extrude them such that C
+> > twists around B and B twists around A.
+> >
+> > I can't quite see how to do that because I believe I read you can only
+> > extrude something once (plus a second extrusion might "smear" an object
+> > even if it were possible).
+> >
+> > Is there a way to do this?
+>
+> Quoted as it didn't make it to the mailing list.
+>
+>
+>
+>
+>
+> -----
+> Admin - PM me if you need anything, or if I've done something stupid...
+>
+> Unless specifically shown otherwise above, my contribution is in the
+> Public Domain; to the extent possible under law, I have waived all
+> copyright and related or neighbouring rights to this work. Obviously
+> inclusion of works of previous authors is not included in the above.
+>
+> The TPP is no simple ?trade agreement.?   Fight it!
+> http://www.ourfairdeal.org/   time is running out!
+> --
+> View this message in context: http://forum.openscad.org/Any-
+> way-to-twist-twice-before-extruding-once-tp18033p18034.html
+> Sent from the OpenSCAD mailing list archive at Nabble.com.
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160808/fe2b2c8d/attachment.html>
+
+From rcmpersiano at gmail.com  Mon Aug  8 17:11:23 2016
+From: rcmpersiano at gmail.com (Ronaldo)
+Date: Mon, 8 Aug 2016 14:11:23 -0700 (MST)
+Subject: [OpenSCAD] Why rotate() and $vpr use opposed rotation orders?
+Message-ID: <1470690683750-18092.post@n5.nabble.com>
+
+AFAIK, rotate([a,b,c]) is equivalent to:
+
+rotate([0,0,c]) rotate([0,b,0]) rotate([a,0,0])
+
+which is opposed to the usual Euler angle order. However, the angles
+expected by $vpr assignments are taken in the inverse order: first Z, last
+X.
+
+I wrote a function to calculate the Euler angles of a viewport frame in
+order to feed $vpr. But I cannot use it with rotate(). I would expect the
+same rule in both.
+
+
+
+
+
+--
+View this message in context: http://forum.openscad.org/Why-rotate-and-vpr-use-opposed-rotation-orders-tp18092.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
+From Torsten.Paul at gmx.de  Mon Aug  8 17:19:48 2016
+From: Torsten.Paul at gmx.de (Torsten Paul)
+Date: Mon, 8 Aug 2016 23:19:48 +0200
+Subject: [OpenSCAD] Why rotate() and $vpr use opposed rotation orders?
+In-Reply-To: <1470690683750-18092.post@n5.nabble.com>
+References: <1470690683750-18092.post@n5.nabble.com>
+Message-ID: <26abc9e5-0cc5-5a48-54b0-24857031aa45@gmx.de>
+
+On 08/08/2016 11:11 PM, Ronaldo wrote:
+> I wrote a function to calculate the Euler angles of a viewport frame in
+> order to feed $vpr. But I cannot use it with rotate(). I would expect the
+> same rule in both.
+> 
+Say hello to legacy issues...
+
+https://github.com/openscad/openscad/blob/master/src/Camera.cc#L41
+
+ciao,
+  Torsten.
+
+
+
+From rcmpersiano at gmail.com  Mon Aug  8 18:05:52 2016
+From: rcmpersiano at gmail.com (Ronaldo Persiano)
+Date: Mon, 8 Aug 2016 19:05:52 -0300
+Subject: [OpenSCAD] Why rotate() and $vpr use opposed rotation orders?
+In-Reply-To: <26abc9e5-0cc5-5a48-54b0-24857031aa45@gmx.de>
+References: <1470690683750-18092.post@n5.nabble.com>
+	<26abc9e5-0cc5-5a48-54b0-24857031aa45@gmx.de>
+Message-ID: <CA+i9EaCn_6Db2rBU5-qXjvO=1AMFdUhzERPbcWfyF3XF4Dvs2Q@mail.gmail.com>
+
+$vpr use Euler angle rotation order. The issue is the rotate() order.
+Another legacy?
+
+2016-08-08 18:19 GMT-03:00 Torsten Paul <Torsten.Paul at gmx.de>:
+
+> On 08/08/2016 11:11 PM, Ronaldo wrote:
+> > I wrote a function to calculate the Euler angles of a viewport frame in
+> > order to feed $vpr. But I cannot use it with rotate(). I would expect the
+> > same rule in both.
+> >
+> Say hello to legacy issues...
+>
+> https://github.com/openscad/openscad/blob/master/src/Camera.cc#L41
+>
+> ciao,
+>   Torsten.
+>
+>
+> _______________________________________________
+> OpenSCAD mailing list
+> Discuss at lists.openscad.org
+> http://lists.openscad.org/mailman/listinfo/discuss_lists.openscad.org
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://lists.openscad.org/pipermail/discuss_lists.openscad.org/attachments/20160808/be4af791/attachment.html>
+
+From oz.at.michael at gmail.com  Mon Aug  8 18:09:36 2016
+From: oz.at.michael at gmail.com (MichaelAtOz)
+Date: Mon, 8 Aug 2016 15:09:36 -0700 (MST)
+Subject: [OpenSCAD] Why rotate() and $vpr use opposed rotation orders?
+In-Reply-To: <CA+i9EaCn_6Db2rBU5-qXjvO=1AMFdUhzERPbcWfyF3XF4Dvs2Q@mail.gmail.com>
+References: <1470690683750-18092.post@n5.nabble.com>
+	<26abc9e5-0cc5-5a48-54b0-24857031aa45@gmx.de>
+	<CA+i9EaCn_6Db2rBU5-qXjvO=1AMFdUhzERPbcWfyF3XF4Dvs2Q@mail.gmail.com>
+Message-ID: <1470694176612-18095.post@n5.nabble.com>
+
+It is easy to do your own e_rotare() module.
+
+
+
+-----
+Admin - PM me if you need anything, or if I've done something stupid...
+
+Unless specifically shown otherwise above, my contribution is in the Public Domain; to the extent possible under law, I have waived all copyright and related or neighbouring rights to this work. Obviously inclusion of works of previous authors is not included in the above.
+
+The TPP is no simple ?trade agreement.?   Fight it! http://www.ourfairdeal.org/   time is running out!
+--
+View this message in context: http://forum.openscad.org/Why-rotate-and-vpr-use-opposed-rotation-orders-tp18092p18095.html
+Sent from the OpenSCAD mailing list archive at Nabble.com.
+
+
