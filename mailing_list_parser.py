@@ -15,19 +15,47 @@ def strip_quotes(content):
     quotes = '\n'.join(q_lines)
     return content, quotes
 
-mailbox_files = glob.glob('./mailing_list/*.txt')
+def get_messages(directory='./mailing_list/*.txt'):
+    mailbox_files = glob.glob(directory)
+    messages = []
+    for f in tqdm.tqdm(mailbox_files):
+        mb = mailbox.mbox(f)
+        mb = list(mb)
+        for m in mb:
+            msg, quotes = strip_quotes(m.get_payload())
 
-messages = []
+            email = Email(date = m.get('Date'), sender = m.get('From'), subject = m.get('Subject'), message=msg, quotes=quotes, is_reply=('In-Reply-To' in m.keys()))
+            messages.append(email)
 
-for f in tqdm.tqdm(mailbox_files):
-    mb = mailbox.mbox(f)
-    mb = list(mb)
-    for m in mb:
-        msg, quotes = strip_quotes(m.get_payload())
+    #root_msgs = [m for m in messages if not m.is_reply]
+    return messages
 
-        email = Email(date = m.get('Date'), sender = m.get('From'), subject = m.get('Subject'), message=msg, quotes=quotes, is_reply=('In-Reply-To' in m.keys()))
-        messages.append(email)
+def get_root(emails):
+    return [m for m in emails if not m.is_reply]
 
-root_msgs = [m for m in messages if not m.is_reply]
+def strip_footer(emails):
+    stripped = []
+    for email in emails:
+        msg = email.message
+        msg = ' '.join(msg.split('--')[:-1])
+        if len(msg)<1:
+            msg = email.message
+        em2 = Email(date = email.date, sender = email.sender, subject = email.subject, message = msg, quotes = email.quotes, is_reply=email.is_reply)
+        stripped.append(em2)
+    return stripped
 
-print len(messages), len(root_msgs)
+def bundle_email(emails):
+    '''return a dict of list of indecies, of emails that are in the same thread'''
+    roots = get_root(emails)
+    root_dict = {r:[] for r in roots}
+    for i,e in enumerate(emails):
+        if e.subject!=None:
+            for r in roots:
+                if r.subject != None:
+                    if r.subject in e.subject:
+                        root_dict[r].append(i)
+    return root_dict
+
+if __name__ == '__main__':
+    messages = get_messages()
+    print len(messages), len(get_root(messages))
