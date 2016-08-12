@@ -29,6 +29,9 @@ def pstdev(data):
     pvar = ss/n # the population variance
     return pvar**0.5
 
+def text2bow(text):
+
+
 print "Importing Emails"
 email = mailing_list_parser.get_messages()
 email = mailing_list_parser.strip_footer(email)
@@ -42,18 +45,23 @@ for root in tqdm.tqdm(roots):
     sentiment = blob.sentiment.polarity
     messages.append((sentiment,root))
 
-print 'Grouping threads'
-thread_dict = mailing_list_parser.bundle_email(email)
-
 print "Converting to corpus"
 #generate a corpus from the message subject lines
 subjects = []
 
-for m in messages:
-    if m[1].message == None:#change back to .subject
-        subjects.append('')
-    else:
-        subjects.append(m[1].message)
+print '\tGrouping threads'
+thread_dict = mailing_list_parser.bundle_email(email)
+
+print "\tProcessing threads"
+for t in tqdm.tqdm(thread_dict.keys()):
+    txt = ''
+    for i in thread_dict[t]:
+        m = email[i]
+        if m.message == None:#change back to .subject
+            txt = txt+' '#subjects.append('')
+        else:
+            txt = txt+m.message+' '#subjects.append(m[1].message)
+    subjects.append(txt)
 
 print "\tTokenizing corpus"
 tokens = []
