@@ -47,13 +47,13 @@ def strip_footer(emails):
 def bundle_email(emails):
     '''return a dict of list of indecies, of emails that are in the same thread'''
     roots = get_root(emails)
-    root_dict = {r:[] for r in roots}
+    root_dict = {j:[] for j,r in enumerate(roots)}
     for i,e in enumerate(emails):
         if e.subject!=None:
-            for r in roots:
+            for j,r in enumerate(roots):
                 if r.subject != None:
                     if r.subject in e.subject:
-                        root_dict[r].append(i)
+                        root_dict[j].append(i)
     return root_dict
 
 if __name__ == '__main__':
